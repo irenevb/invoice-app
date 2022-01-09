@@ -1,0 +1,35 @@
+<div class="items">
+    <form (submit)="addItem()" class="adder">
+        <input 
+            type="text"
+            name="inputItem"
+            placeholder="Enter item to the invoice..."
+            class="item-input"
+            [(ngModel)]="inputItem"
+        />
+        <input 
+            type="number"
+            name="inputPrice"
+            placeholder="Price"
+            class="item-input"
+            [(ngModel)]="inputPrice"
+        />
+        <input type="submit" value="Add item" class="item-submit"/>
+    </form>
+
+    <div class="item-header">
+        <div class="id">ID</div>
+        <div class="content">Name</div>
+        <div class="price">Price</div>
+        <div class="delete">Delete</div>
+    </div>
+    <div *ngFor="let item of items; let i = index;" class="item {{ (item.enable ? '' : 'disabled' ) }}" >
+        <div class="id">{{ i }}</div>
+        <div class="content" (click)="toggleEnable(i)">{{item.content}}</div>
+        <div class="price">{{item.price}}</div>
+        <button class="delete" (click)="deleteItem(i)">Delete</button>
+    </div>
+    <div class="item-total">
+        Total {{total}}€
+    </div>
+</div>
