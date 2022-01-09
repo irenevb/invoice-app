@@ -2,7 +2,9 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2.
 
-Creates the total of an invoice while adding items to the list. ![image](https://user-images.githubusercontent.com/44347390/148699302-b52f6243-afc8-4969-b89d-e0ec17529a99.png)
+Creates the total of an invoice while adding items to the list. 
+
+![image](https://user-images.githubusercontent.com/44347390/148699302-b52f6243-afc8-4969-b89d-e0ec17529a99.png)
 
 You can add more items adding a new object with a name and a price.
 
